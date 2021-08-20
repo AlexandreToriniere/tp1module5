@@ -5,17 +5,23 @@
  $moyenne = ( $note_maths+$note_francais+$note_histoire_geo )/3;
  echo 'La moyenne est de '.$moyenne.' / 20.<br/>';//moyenne
 
+?> 
 
-
+<?php
  $prix_ht=50;
  $tva = 20;
  $prix_ttc = $prix_ht*(1+$tva /100);
  echo 'Le prix TTC du produit est de ' .$prix_ttc.'€.<br/>';//TTC
+ ?> 
 
 
+<?php
  $test="42";
  var_dump($test);
+?> 
 
+
+<?php
  $sexe ="mâle";
  if ($sexe == "mâle")// si le sexe est strictement égal à mâle
  {
@@ -26,7 +32,11 @@
  {
      echo "Il ne s'agit pas d'un mâle <br/>" ;
  }
+ ?> 
 
+
+
+<?php
  $budget = 553.89;
  $achats = 1554.76;
 
@@ -39,7 +49,12 @@
  {
      echo " Le budget n'est pas suffisant<br/>";
  }
+ ?> 
 
+
+
+
+<?php
  $age = 15;
  if($age<18)
  {
@@ -50,7 +65,10 @@
  {
      echo " C'est un majeur<br/>";
  }
+ ?> 
 
+
+ <?php
  $heure = 20;
  if($heure > 0 && $heure < 12)
  {
@@ -68,8 +86,11 @@
  {
     echo " C'est le soir <br/>";
 }
+ ?> 
 
 
+
+ <?php
  $multc=0;
  $multic=0;
  for( $multic = 0; $multic <=10; $multic++)
@@ -93,7 +114,10 @@ while($newval <= 20)
 
     $newval += 2; 
 }
+?> 
 
+
+<?php
 echo '<br/>';
 echo 'tableaux pays<br/>';
 $newtab = array(
@@ -128,8 +152,10 @@ echo '</pre>';
         echo 'La valeur 42 ne se trouve pas dans le tableaux <br/>';
     }
 }    
+?> 
 
-       
+
+<?php
 /*
 echo '<br/>';
 echo 'tableaux rand2 <br/>';
@@ -146,8 +172,11 @@ $tabtri = array(0,1,2,3,4,5,6,7,8,9);
                 $tabri[] => $tabtriinf[];
             }
 */
+?> 
 
 
+
+<?php
 echo '<br/>';
 echo 'Nombre elements tableau <br/>';
 echo '<br/>';
@@ -163,8 +192,10 @@ echo '<br/>';
     );
 
     echo 'Le tableau pays population contient '.count($pays_population).'éléments<br/>';
+    ?> 
 
 
+<?php
 echo '<br/>';
 echo 'Tableau cocktails <br/>';
 echo '<br/>';
@@ -172,10 +203,11 @@ echo '<br/>';
 $cocktails = array('Mojito', 'Long Island
 Iced Tea', 'Gin Fizz', 'Moscow mule');
 
-echo 'Voici le second cocktail'.$cocktails[1].'.<br/>';
+echo 'Voici le second cocktail'.$cocktails[1].'.<br/>'
+?> 
 
 
-
+<?php
 echo '<br/>';
 echo 'Fonction Hello World <br/>';
 echo '<br/>';
@@ -184,8 +216,10 @@ function HelloWorld()
       echo 'Hello World!';
 }
 HelloWorld();
+?> 
 
 
+<?php
 echo '<br/>';
 echo 'Je retourne mon argument <br/>';
 echo '<br/>';
@@ -195,9 +229,9 @@ function jeRetourneMonArgument(){
     return;
 }
 jeRetourneMonArgument();
+?>
 
-
-
+<?php
 echo '<br/>';
 echo 'Exo Antoine Griezmann<br/>';
 echo '<br/>';
@@ -207,10 +241,11 @@ function conca($ant,$griez){
     return  $ant.$griez;
        
 }
-
 echo conca($ant,$griez);
+?>
 
 
+<?php
 echo '<br/>';
 echo 'Exo Fonction addition<br/>';
 
@@ -221,8 +256,10 @@ function addition($arg1,$arg2){
       
 }
 echo addition($arg1,$arg2);
+?>
 
 
+<?php
 echo '<br/>';
 echo 'Exo Fonction soustraction<br/>';
 
@@ -233,9 +270,9 @@ function soustraction($arg1,$arg2){
       
 }
 echo soustraction($arg1,$arg2);
+?>
 
-
-
+<?php
 echo '<br/>';
 echo 'Exo Fonction multiplication<br/>';
 
@@ -246,4 +283,78 @@ function multiplication($arg1,$arg2){
       
 }
 echo multiplication($arg1,$arg2);
+?>
+
+
+<?php
+echo '<br/>';
+echo 'Exo Fonction division<br/>';
+echo '<br/>';
+$arg1=5;
+$arg2=5;
+function division($arg1,$arg2){
+    return  $arg1/$arg1;
+      
+}
+echo division($arg1,$arg2);
+?>
+
+
+<?php
+echo '<br/>';
+echo 'Exo Fonction estIlMajeure<br/>';
+echo '<br/>';
+$age1 = 32;
+$age2 = 8;
+function estIlMajeure($age1, $age2){
+
+    if($age1 > 18)
+    {
+       echo 'Il est majeur';
+       return (TRUE); 
+       
+    }
+   
+    else if ($age2 <18)
+    {
+        echo 'Il est mineur';
+        return(False);
+        
+    }
+}
+
+echo estIlMajeure($age1, $age2);
+?>
+
+<?php
+echo '<br/>';
+echo 'Exo Fonction tableau<br/>';
+echo '<br/>';
+function premierElementTableau(){
+    $newtableau=array('Enzo','michel', 'alex', 'julien', 'franck', 'gerard');
+        return var_dump ($newtableau[0]);
+    }
+
+echo premierElementTableau();
+?>
+
+
+<?php
+echo '<br/>';
+echo 'Exo Le plus grand<br/>';
+echo '<br/>';
+function plusGrand(){
+    $arr_grand= array(5,17,69,78,20);
+    $turn=0;
+
+    while($turn<5)
+    {
+        echo max($arr_grand);
+        return;
+    }
+}
+echo plusGrand() .'est le chiffre le plus grand';
+
 ?>  
+
+
