@@ -355,6 +355,36 @@ function plusGrand(){
 }
 echo plusGrand() .'est le chiffre le plus grand';
 
-?>  
+?>
 
+<?php
+echo '<br/>';
+echo 'Exo VerificationMDP<br/>';
+echo '<br/>';
+function verificationPassword(){
+    $pswrd ='bilibilibili';
+    if(strlen($pswrd)>=8)
+    return (TRUE);
+    else{
+        return (FALSE);
+    }
+}
+
+echo verificationPassword();
+?>
+
+
+<?php
+echo '<br/>';
+echo 'Exo VerificationMDP2.0<br/>';
+echo '<br/>';
+$pswrd ='biliM98514ibili';
+$pattern = "ba(na){2}/i";
+function verificationPassword2($pswrd,$pattern){
+    
+    if(preg_match()
+}
+
+echo verificationPassword2($pswrd,$pattern);
+?>
 
