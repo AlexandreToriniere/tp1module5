@@ -378,13 +378,116 @@ echo verificationPassword();
 echo '<br/>';
 echo 'Exo VerificationMDP2.0<br/>';
 echo '<br/>';
-$pswrd ='biliM98514ibili';
-$pattern = "ba(na){2}/i";
-function verificationPassword2($pswrd,$pattern){
+function verificationPassword2(){
+    $pswrd1 ='8aE64646464';
     
-    if(preg_match()
+    if(preg_match('#^[a-zA-Z0-9]+$#', $pswrd1) && strlen($pswrd1)>=8)
+    {
+        return (TRUE);}
+
+
+    else{
+        return (FALSE);
+    } 
 }
 
-echo verificationPassword2($pswrd,$pattern);
+var_dump(verificationPassword2());
+echo '<br/>';
+?>
+
+
+<?php
+echo '<br/>';
+echo 'fonction capitale<br/>';
+echo '<br/>';
+ 
+function capital(){
+    $pays = 'Allemagne';
+    switch($pays)
+    {
+        case 'France':
+            return 'Paris';
+        break;    
+    
+        case 'Allemagne':
+            return 'Berlin';
+        break;    
+       
+
+        case 'Italie':
+            return 'Rome';
+        break;    
+       
+        case 'Maroc':
+            return 'Rabat';
+        break;    
+    
+        case 'Portugal':
+            return 'Lisbonne';
+        break;    
+    
+        case 'Angleterre':
+            return 'Londres';
+        break;      
+  
+        default:
+        return 'Inconnu';
+        break;  
+        }
+    } 
+    
+var_dump( capital()) ;
+echo '<br/>'; 
+?>
+
+<?php
+echo '<br/>';
+echo 'Fonction liste html<br/>';
+echo '<br/>';
+function listhtml(){
+    $tablist = ['france', 'allemagne', 'espagne', 'italie'];
+    $listname = 'pays';
+    $count = 3;
+    '<h3>'.$listname.'</h3>';/*Mettre en titre*/
+
+    foreach ($tablist as $items) {
+    echo "<li>" ;
+    echo $items;
+    echo "</li>";
+$count ++;
+}
+    if($listname ==''){
+        return (null);
+    }
+}
+echo listhtml();
+?>
+
+
+<?php
+echo '<br/>';
+echo 'Fonction remplacerLesLettres<br/>';
+echo '<br/>';
+function remplacerLesLettres(){
+    $replace = 'Bonjour les amis';
+    $replace = strtr($replace, 'e,i,o', '3,1,0');
+    return $replace;
+}
+
+    echo "<br><br>".remplacerLesLettres()."<br><br>";
+?>
+
+
+<?php
+echo '<br/>';
+echo 'Fonction quelle date<br/>';
+echo '<br/>';
+function quelleDate(){
+    $replace1 = 23082021;
+    $replace1 = strval($replace1);
+    return $replace1;
+}
+var_dump(quelleDate());
+echo "<br><br>".quelleDate()."<br><br>";
 ?>
 
