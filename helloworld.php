@@ -460,6 +460,7 @@ $count ++;
         return (null);
     }
 }
+
 echo listhtml();
 ?>
 
@@ -468,26 +469,23 @@ echo listhtml();
 echo '<br/>';
 echo 'Fonction remplacerLesLettres<br/>';
 echo '<br/>';
-function remplacerLesLettres(){
-    $replace = 'Bonjour les amis';
+function remplacerLesLettres($replace){
     $replace = strtr($replace, 'e,i,o', '3,1,0');
     return $replace;
 }
 
-    echo "<br><br>".remplacerLesLettres()."<br><br>";
+    echo "<br><br>".remplacerLesLettres("Bonjour les amis")."<br><br>";
 ?>
-
 
 <?php
 echo '<br/>';
-echo 'Fonction quelle date<br/>';
+echo 'Fonction quelledate<br/>';
 echo '<br/>';
-function quelleDate(){
-    $replace1 = 23082021;
-    $replace1 = strval($replace1);
-    return $replace1;
+function quelleDate($date){
+    $date = new DateTime('');
+    return $date->format('d-m-Y');
 }
-var_dump(quelleDate());
-echo "<br><br>".quelleDate()."<br><br>";
+
+echo "<br><br>".quelleDate('23/08/2021')."<br><br>";
 ?>
 
