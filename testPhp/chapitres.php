@@ -32,7 +32,6 @@
     }
         ?>
          <a href="connexion.php" >connexion</a>
-         <a href="chapitres.php" >chapitres</a>
         
     </div>  
     
@@ -42,14 +41,14 @@
         <div class="row">
             <div class="col-4 " >
                  <?php            
-                        require ('menu.php');
+                        require ('menuchapitre.php');
                 ?>
             </div>  
         <div class="col-8">
             <div class >
                 <?php    
-                    require ('listeexo.php');
-                    listeexo();   
+                    require ('listechapitres.php');
+                    listechapitre();   
                 ?>
             </div>
 
