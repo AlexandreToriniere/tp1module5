@@ -1,10 +1,10 @@
 <?php
      require("config.php");
-
-$titre = 'Chapitre 2';
+?>
+<?php
+$titre = 'Chapitre 4';
 
 $quizz='';
-
 
 
 ?>

@@ -1,1 +1,6 @@
-<quizz><enonce>Comment déclarer une variable?</enonce></quizz>
+
+<quizz>
+    <enonce>
+$_COOKIE — Cookies HTTP. Il s'agit Un tableau associatif de variables, passé au script courant, via des cookies HTTP.
+    </enonce>
+</quizz>

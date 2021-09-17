@@ -1,0 +1,9 @@
+<quizz>
+ <ennonce>
+  <question> Sachant que $a = 4. Quelle instruction affiche : 4 = quatre ?</question>
+  <reponse>echo '$a = quatre';</reponse>
+  <reponse>echo '$a = 2+2';</reponse>
+  <reponse>echo &quot;$a = quatre&quot;;</reponse>
+  <reponse>Je ne sais pas</reponse>
+ </ennonce>
+</quizz>

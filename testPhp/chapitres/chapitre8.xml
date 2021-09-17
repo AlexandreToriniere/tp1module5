@@ -1,0 +1,4 @@
+<quizz><enonce>$_SESSION — Variables de session&#13;
+Un tableau associatif des valeurs stockées dans les sessions, et accessible au script courant. Voyez l'extension Sessions pour plus de détails sur comment est utilisée cette variable.&#13;
+&#13;
+session_start() - Démarre une nouvelle session ou reprend une session existante</enonce></quizz>

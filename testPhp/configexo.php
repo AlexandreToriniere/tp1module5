@@ -3,28 +3,16 @@ function affmsg($msg){
    return $msg;
  }
  
- 
-function getquizz($quizz){
-    $quizz = simplexml_load_file('../testPhp/chapitres/'.$_GET['chapitre'].'.xml');
-    //print_r($quizz) ouvre le fichier;
-    foreach ($quizz as $ennonce) { ?>
-    
-         <?= $ennonce ?> <br/>
-    <?php
-      }
-    }
-
-
-
 ?>
 
  <?php
  function moyenne(){  
-    $prix_ht=50;
-    $tva = 20;
-    $prix_ttc = $prix_ht*(1+$tva /100);
-    return 'Le prix TTC du produit est de ' .$prix_ttc.'€.<br/>';//TTC
-}
+    $note_maths = 15;
+    $note_francais = 12;
+    $note_histoire_geo = 9;
+    $moyenne = ( $note_maths+$note_francais+$note_histoire_geo )/3;
+    echo 'La moyenne est de '.$moyenne.' / 20.<br/>';//moyenne
+ }
 ?>
 
 
@@ -39,7 +27,7 @@ function tva(){
 
 <?php
 function tabpopulation(){
-    $pays_population = array(
+    $pays_population = array(//tableau associatif
     'France' => 67595000,
     'Suede' => 9998000,
     'Suisse' => 8417000,
@@ -49,7 +37,7 @@ function tabpopulation(){
     'Allemagne' => 82800000,
     );
 
-    return 'Le tableau pays population contient '.count($pays_population).'éléments<br/>';
+    return 'Le tableau pays population contient '.count($pays_population).'éléments<br/>';// Compte tous les éléments d'un tableau
 }
 ?>
 
@@ -65,11 +53,11 @@ function conca($ant,$griez){
 
 
 <?php
+function addition(){
     $arg1=5;
     $arg2=5;
-    function addition($arg1,$arg2){
         return  $arg1+$arg1;     
-    }
+}   
 ?>
 
 
@@ -77,7 +65,7 @@ function conca($ant,$griez){
 <?php
 function verificationPassword(){
     $pswrd ='bilibilibili';
-    if(strlen($pswrd)>=8){
+    if(strlen($pswrd)>=8){//définit un nombre définit de caractère autorisé
     return (TRUE);
 }else{
         return (FALSE);
@@ -127,14 +115,37 @@ function plusGrand(){
 ?>
 
 <?php
-function getxml(){
-    $quizz = simplexml_load_file('../testPhp/exo1.xml');
-//print_r($quizz) ouvre le fichier;
-foreach ($quizz as $ennonce) { ?>
+//fonction rewritefile
+function rewritefile(){
+    if(isset($_POST['ennonce'])){
+        $fichier = fopen('chapitres/' . $_POST['name'].'.xml', 'w+');//Si le fichier existe, les informations existantes seront supprimées. S’il n’existe pas, crée un fichier.
 
-    <h1 class="titre">Ennoncé :</h1> <?= $ennonce ?> <br/>
-<?php
-  }
+      $xml = new XMLWriter();
+            $xml->openMemory();//Mets le fichier en tampon
+            $xml -> startElement('quizz');//Crée le premier noeud
+            $xml ->writeElement('enonce', $_POST['ennonce']);//Crée un noeud dans le premier noeud
+            $xml->endElement();//Met fin au premier noeud
+            $xml2 = $xml-> outputMemory(true);//Compile le tout
+
+            fputs($fichier, $xml2);
+            fclose($fichier);
+    }
 }
 
+?>
+
+
+<?php
+    function erase(){
+        if(isset($_POST['name'])){
+            $fichierDel = ('chapitres/' . $_POST['name'].'.xml');//Récupère le ficher désigné dans le formulaire
+            if(unlink($fichierDel)){// Fonction qui permet d'effacer un fichier
+                echo 'Le fichier' . $fichierDel . 'a bien été effacé';
+            }
+
+            else {
+                echo 'Le fichier' . $fichierDel .' n\'a pas été effacé';
+         }
+    }
+}
 ?>

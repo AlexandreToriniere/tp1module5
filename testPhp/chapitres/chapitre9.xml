@@ -1,0 +1,4 @@
+<quizz><enonce>$_GET — Variables HTTP GET&#13;
+&#13;
+Un tableau associatif des valeurs passées au script courant via les paramètres d'URL (aussi connue sous le nom de &quot;query string&quot;). Notez que ce tableau n'est pas seulement rempli pour les requêtes GET, mais plutôt pour toutes les requêtes avec un query string.&#13;
+</enonce></quizz>

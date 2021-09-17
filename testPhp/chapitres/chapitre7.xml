@@ -1,0 +1,3 @@
+<quizz><enonce>L'instruction if est une des plus importantes instructions de tous les langages, PHP inclus. Elle permet l'exécution conditionnelle d'une partie de code. Les fonctionnalités de l'instruction if sont les mêmes en PHP qu'en C.&#13;
+&#13;
+Si l'expression vaut true, PHP exécutera l'instruction et si elle vaut false, l'instruction sera ignorée. Plus de détails sur les valeurs qui valent false sont disponibles dans la section</enonce></quizz>

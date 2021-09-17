@@ -1,0 +1,9 @@
+<quizz>
+ <ennonce>
+  <question>Quelle fonction retourne la longueur d'une chaîne de texte ?</question>
+  <reponse>strlen</reponse>
+  <reponse>strlength</reponse>
+  <reponse>length</reponse>
+  <reponse>substr</reponse>
+ </ennonce>
+</quizz>

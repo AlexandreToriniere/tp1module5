@@ -1,0 +1,9 @@
+<quizz>
+ <ennonce>
+  <question>Sachant que $dodo = 6. Quelle est la valeur de ma nuit : $dodo += 2; ?</question>
+  <reponse>3</reponse>
+  <reponse>8</reponse>
+  <reponse>12</reponse>
+  <reponse>Je ne sais pas</reponse>
+ </ennonce>
+</quizz>

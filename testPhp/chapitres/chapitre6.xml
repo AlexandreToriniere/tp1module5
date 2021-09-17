@@ -1,0 +1,9 @@
+<quizz><enonce>Les boucles vont nous permettre d’exécuter plusieurs fois un bloc de code, c’est-à-dire d’exécuter un code « en boucle » tant qu’une condition donnée est vérifiée.&#13;
+&#13;
+Nous disposons de quatre boucles différentes en PHP :&#13;
+&#13;
+La boucle while (« tant que ») ;&#13;
+La boucle do… while (« faire… tant que ») ;&#13;
+La boucle for (« pour ») ;&#13;
+La boucle foreach (« pour chaque ») ;&#13;
+</enonce></quizz>

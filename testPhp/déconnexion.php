@@ -5,7 +5,7 @@ session_start();
 
 if($_SESSION['connecte'] = 'oui' || $_SESSION['connecte'] = 'non' ){
     session_destroy();
-    header('Location: connexion.php');
+    header('Location: index.php');
 }
 
 ?>

@@ -9,7 +9,10 @@ $enonce = 'Calculer le prix TTC du produit.';
 
 
  
-$msg = fopen('../testPhp/exo2.xml','a+');;
+$msg = '$prix_ht=50;<br/>
+$tva = 20;<br/>
+$prix_ttc = $prix_ht*(1+$tva /100);<br/>
+return \'Le prix TTC du produit est de .$prix_ttc.€<br/>;';
 ?>
 
 

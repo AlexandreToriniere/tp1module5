@@ -1,0 +1,9 @@
+<quizz>
+ <ennonce>
+  <question> Quelles valeurs peut prendre le type booléen ?</question>
+  <reponse>TRUE ou FALSE</reponse>
+  <reponse>Toutes sauf NULL</reponse>
+  <reponse> 0 ou 1</reponse>
+  <reponse>Je ne sais pas</reponse>
+ </ennonce>
+</quizz>

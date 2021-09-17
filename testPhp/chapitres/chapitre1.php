@@ -1,12 +1,10 @@
 <?php
-    require("configexo.php");
+    require("config.php");
 ?>
 <?php
 $titre = 'Chapitre 1';
 
 $quizz='';
-
-
 
 ?>
 

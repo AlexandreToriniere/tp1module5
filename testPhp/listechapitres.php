@@ -1,6 +1,7 @@
 <?php
 function listechapitre(){
  if (isset($_GET['chapitre'])) { /*si la variable $_GET['site'] existe.*/ 
+//Méthode switch case
     switch ($_GET['chapitre']) {
         case 'chapitre1':
             include_once("chapitres/chapitre1.php");

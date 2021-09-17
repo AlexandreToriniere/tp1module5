@@ -1,0 +1,9 @@
+<quizz>
+ <ennonce>
+  <question> Quelle est l'utilité de l'opérateur || ?</question>
+  <reponse>Il sert à vérifier que toutes les conditions sont réalisées.</reponse>
+  <reponse>Il sert à vérifier qu'une, et une seule, des conditions est réalisée.</reponse>
+  <reponse>Il sert à vérifier qu'une, au moins, des conditions est réalisée.</reponse>
+  <reponse>Je ne sais pas</reponse>
+ </ennonce>
+</quizz>

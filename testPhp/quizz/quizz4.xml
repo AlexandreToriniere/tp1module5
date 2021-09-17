@@ -1,0 +1,9 @@
+<quizz>
+ <ennonce>
+  <question>Comment vérifie-t-on l'égalité de deux variables : $a et $b ?</question>
+  <reponse>$a == $b</reponse>
+  <reponse>$a != $b</reponse>
+  <reponse>if($a,$b)</reponse>
+  <reponse>$a = $b</reponse>
+ </ennonce>
+</quizz>

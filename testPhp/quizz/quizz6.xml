@@ -1,0 +1,9 @@
+<quizz>
+ <ennonce>
+  <question> La boucle for ($i=0 ; $i&lt;=3 ; $i++ ) { echo $i; }...</question>
+  <reponse>Sera éxécutée 2 fois</reponse>
+  <reponse>Sera éxécutée 3 fois</reponse>
+  <reponse>Sera éxécutée 4 fois</reponse>
+  <reponse>Je ne sais pas</reponse>
+ </ennonce>
+</quizz>
